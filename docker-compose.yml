@@ -1,0 +1,8 @@
+services:
+  portfolio:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-5174}:${PORT:-5174}"
+    restart: unless-stopped
